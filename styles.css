@@ -436,3 +436,14 @@ a.vehicle-card:hover .vehicle-media img{transform:scale(1.025)}
   .subpage-main{padding:50px 22px 70px}
   .machine-slot-grid,.resource-shell{grid-template-columns:1fr}
 }
+
+.recruit-contact{margin-top:28px;padding-top:6px}
+.recruit-contact>p{color:#d8dde3;line-height:1.85}
+.recruit-mail{background:#fff;color:#111}
+.contact-address{margin-top:18px;padding:20px 22px;border:1px solid #27313c;background:#0a1119}
+.contact-address strong{display:block;margin-bottom:8px}
+.contact-address p{margin:0;color:#b9c2cb;line-height:1.8}
+@media(max-width:900px){
+  .recruit-contact{margin-top:24px}
+  .contact-address{margin-top:16px}
+}
