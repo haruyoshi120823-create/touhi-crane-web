@@ -1,4 +1,1 @@
-採用情報更新版です。
-GitHubの index.html と styles.css をこの2ファイルで上書きしてください。
-画像ファイルは変更不要です。
-採用情報は東彼クレーン公式サイトで確認できた内容のみ使用しています。
+GitHubへ index.html と styles.css を上書きし、rafter.html / allterrain.html / transport.html を新規追加してください。画像ファイルは変更不要です。
