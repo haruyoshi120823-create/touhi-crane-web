@@ -20,6 +20,19 @@
       .mobile-social a{flex:1;text-align:center;padding:13px 10px;border:1px solid #2c3743;border-radius:3px;font-size:13px;font-weight:900}
       .footer-social{display:none}
     }
+
+.fleet-counts{background:#f4f6f8;padding-top:76px;padding-bottom:80px}
+.fleet-counts .fleet-description{max-width:850px;color:#65717e;line-height:1.8;margin-bottom:28px}
+.fleet-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.fleet-summary-group{background:#fff;border:1px solid #dfe4e9;border-top:4px solid #d71920;padding:26px}
+.fleet-summary-group h3{margin:0 0 18px;font-size:21px}
+.fleet-summary-group h3 span{float:right;color:#d71920;font-size:16px}
+.fleet-summary-group a{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #e5e9ed;padding:12px 2px;font-weight:750}
+.fleet-summary-group a:hover{color:#d71920}
+.fleet-summary-group a strong{white-space:nowrap;font-size:17px}
+.fleet-summary-group .go-details{margin-top:12px;padding-top:16px;color:#d71920}
+.fleet-footnote{font-size:12px;color:#65717e;margin-top:18px}
+@media(max-width:900px){.fleet-counts{padding-top:62px;padding-bottom:62px}.fleet-summary{grid-template-columns:1fr;gap:16px}.fleet-summary-group{padding:20px}.fleet-summary-group h3{font-size:19px}}
   </style>
 </head>
 <body>
@@ -82,7 +95,7 @@
 
   <section class="strengths" aria-label="東彼クレーンの特徴">
     <div><strong>13t〜400t</strong><span>クレーンラインナップ</span></div>
-    <div><strong>22台</strong><span>総保有台数</span></div>
+    <div><strong>24台</strong><span>クレーン保有台数</span></div>
     <div><strong>運輸</strong><span>トラック・トレーラー</span></div>
     <div><strong>長崎</strong><span>東彼杵町を拠点</span></div>
   </section>
@@ -109,6 +122,29 @@
         <div class="vehicle-card-body"><span>TRANSPORT</span><h3>トラック・トレーラー</h3><p>各種運搬に対応</p><strong>運輸部門</strong></div>
       </article>
     </div>
+  </section>
+
+
+  <section id="fleet-counts" class="section fleet-counts">
+    <div class="section-heading"><div><span class="section-en">FLEET LINEUP</span><h2>保有クレーン台数</h2></div><p>トン数別の保有台数と型式をご確認いただけます。</p></div>
+    <div class="fleet-summary">
+      <div class="fleet-summary-group"><h3>ラフタークレーン <span>計20台</span></h3>
+        <a href="rafter.html#ton-13"><span>13t ラフタークレーン</span><strong>2台 ↗</strong></a>
+        <a href="rafter.html#ton-16"><span>16t ラフタークレーン</span><strong>1台 ↗</strong></a>
+        <a href="rafter.html#ton-25"><span>25t ラフタークレーン</span><strong>9台 ↗</strong></a>
+        <a href="rafter.html#ton-50"><span>50t ラフタークレーン</span><strong>1台 ↗</strong></a>
+        <a href="rafter.html#ton-60"><span>60t ラフタークレーン</span><strong>3台 ↗</strong></a>
+        <a href="rafter.html#ton-70"><span>70t ラフタークレーン</span><strong>2台 ↗</strong></a>
+        <a href="rafter.html#ton-100"><span>100t ラフタークレーン</span><strong>2台 ↗</strong></a>
+        <a class="go-details" href="rafter.html">型式一覧を見る →</a></div>
+      <div class="fleet-summary-group"><h3>オールテレーンクレーン <span>計4台</span></h3>
+        <a href="allterrain.html#ton-120"><span>120t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
+        <a href="allterrain.html#ton-130"><span>130t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
+        <a href="allterrain.html#ton-300"><span>300t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
+        <a href="allterrain.html#ton-400"><span>400t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
+        <a class="go-details" href="allterrain.html">型式一覧を見る →</a></div>
+    </div>
+    <p class="fleet-footnote">※保有車両一覧表（2026年4月現在）に基づく。クレーン合計24台。運輸部門の車両は別途12台。</p>
   </section>
 
   <section id="works" class="section works-section">
