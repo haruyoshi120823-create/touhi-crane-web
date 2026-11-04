@@ -1,0 +1,79 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="有限会社東彼クレーンのラフタークレーン保有一覧。2026年4月現在の保有台数・型式をご案内します。"><title>ラフタークレーン｜有限会社 東彼クレーン</title><link rel="stylesheet" href="styles.css"><style>
+.fleet-page{max-width:1130px;margin:0 auto}
+.fleet-intro{font-size:16px;line-height:1.85;color:#65717e;max-width:790px}
+.fleet-topline{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 28px}
+.fleet-topline span{background:#071a31;color:white;padding:12px 18px;font-weight:900;border-radius:3px}
+.ton-nav{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 32px}
+.ton-nav a{background:#fff;border:1px solid #dfe4e9;padding:12px 18px;border-radius:3px;font-weight:900}
+.ton-nav a:hover{background:#d71920;color:#fff}
+.ton-group{scroll-margin-top:20px;background:#fff;margin:22px 0;border:1px solid #dfe4e9;border-top:4px solid #d71920;padding:26px}
+.ton-title{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin:0 0 14px}
+.ton-title h2{font-size:clamp(23px,3vw,32px);margin:0}
+.ton-title strong{color:#d71920;font-size:20px;white-space:nowrap}
+.models{list-style:none;padding:0;margin:0}
+.models li{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #e6e9ed}
+.models li:last-child{border-bottom:0}
+.models li span{font-weight:800}
+.models li small{color:#65717e}
+.documents-note{background:#f4f6f8;padding:16px 18px;margin:18px 0 0;line-height:1.7;color:#5c6671;font-size:13px}
+.document-types{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.document-types span{border:1px solid #dfe4e9;border-radius:3px;padding:7px 11px;color:#65717e;font-size:12px}
+.fleet-page-footer{padding:34px 0;margin-top:28px;border-top:1px solid #dfe4e9;color:#65717e;font-size:13px}
+@media(max-width:900px){.ton-group{padding:18px}.models li{flex-direction:column;gap:3px}.ton-nav a{padding:10px 14px}.ton-title h2{font-size:23px}}
+
+.ton-photo{height:185px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:linear-gradient(130deg,#e5eef9,#cbdced);border:1px dashed #b4c7dc;border-radius:6px;margin:17px 0;color:#537497}
+.ton-photo span{font-size:51px;opacity:.55;filter:grayscale(1)}
+.ton-photo strong{font-size:13px;letter-spacing:.1em}
+@media(max-width:700px){.ton-photo{height:150px}}
+</style></head>
+<body class="subpage-body"><header class="site-header subpage-header"><a class="brand" href="index.html"><span class="brand-small">有限会社</span><span class="brand-main">東彼クレーン</span><span class="brand-en">TOUHI CRANE</span></a></header>
+<main class="subpage-main"><div class="fleet-page"><a class="back-link" href="index.html#fleet-counts">← 保有クレーン台数に戻る</a><p class="section-en">VEHICLES / DOCUMENTS</p><h1 class="machine-title">ラフタークレーン</h1><p class="fleet-intro">保有車両一覧表（2026年4月現在）に基づくトン数別・型式別の一覧です。能力表・CAD・寸法図・カタログは準備ができた型式から順次追加します。</p><div class="fleet-topline"><span>保有台数　20台</span><span>掲載トン数　7種類</span></div><nav class="ton-nav" aria-label="トン数別に移動"><a href="#ton-13">13t</a><a href="#ton-16">16t</a><a href="#ton-25">25t</a><a href="#ton-50">50t</a><a href="#ton-60">60t</a><a href="#ton-70">70t</a><a href="#ton-100">100t</a></nav><section class="ton-group" id="ton-13">
+  <div class="ton-title"><h2>13t ラフタークレーン</h2><strong>2台</strong></div>
+  <div class="ton-photo" aria-label="実車写真準備中"><span aria-hidden="true">🏗️</span><strong>このトン数の写真は準備中</strong></div><ul class="models"><li><span>GR-130NL-2</span><small>1台</small></li><li><span>GR-130NL-1</span><small>1台</small></li></ul>
+  <div class="documents-note">資料：準備中（公開できる能力表・CAD・寸法図・カタログが揃い次第、型式ごとに追加します。）
+    <div class="document-types"><span>能力表</span><span>CAD</span><span>寸法図</span><span>カタログ</span></div>
+  </div>
+</section>
+<section class="ton-group" id="ton-16">
+  <div class="ton-title"><h2>16t ラフタークレーン</h2><strong>1台</strong></div>
+  <div class="ton-photo" aria-label="実車写真準備中"><span aria-hidden="true">🏗️</span><strong>このトン数の写真は準備中</strong></div><ul class="models"><li><span>GR-160N-4</span><small>1台</small></li></ul>
+  <div class="documents-note">資料：準備中（公開できる能力表・CAD・寸法図・カタログが揃い次第、型式ごとに追加します。）
+    <div class="document-types"><span>能力表</span><span>CAD</span><span>寸法図</span><span>カタログ</span></div>
+  </div>
+</section>
+<section class="ton-group" id="ton-25">
+  <div class="ton-title"><h2>25t ラフタークレーン</h2><strong>9台</strong></div>
+  <div class="ton-photo" aria-label="実車写真準備中"><span aria-hidden="true">🏗️</span><strong>このトン数の写真は準備中</strong></div><ul class="models"><li><span>GR-250N-2</span><small>1台</small></li><li><span>GR-250N-3</span><small>1台</small></li><li><span>GR-250N-4</span><small>5台</small></li><li><span>GR-250N-5</span><small>2台</small></li></ul>
+  <div class="documents-note">資料：準備中（公開できる能力表・CAD・寸法図・カタログが揃い次第、型式ごとに追加します。）
+    <div class="document-types"><span>能力表</span><span>CAD</span><span>寸法図</span><span>カタログ</span></div>
+  </div>
+</section>
+<section class="ton-group" id="ton-50">
+  <div class="ton-title"><h2>50t ラフタークレーン</h2><strong>1台</strong></div>
+  <div class="ton-photo" aria-label="実車写真準備中"><span aria-hidden="true">🏗️</span><strong>このトン数の写真は準備中</strong></div><ul class="models"><li><span>GR-500N-2</span><small>1台</small></li></ul>
+  <div class="documents-note">資料：準備中（公開できる能力表・CAD・寸法図・カタログが揃い次第、型式ごとに追加します。）
+    <div class="document-types"><span>能力表</span><span>CAD</span><span>寸法図</span><span>カタログ</span></div>
+  </div>
+</section>
+<section class="ton-group" id="ton-60">
+  <div class="ton-title"><h2>60t ラフタークレーン</h2><strong>3台</strong></div>
+  <div class="ton-photo" aria-label="実車写真準備中"><span aria-hidden="true">🏗️</span><strong>このトン数の写真は準備中</strong></div><ul class="models"><li><span>GR-600N-1</span><small>1台</small></li><li><span>GR-600N-2</span><small>1台</small></li><li><span>GR-600N-3</span><small>1台</small></li></ul>
+  <div class="documents-note">資料：準備中（公開できる能力表・CAD・寸法図・カタログが揃い次第、型式ごとに追加します。）
+    <div class="document-types"><span>能力表</span><span>CAD</span><span>寸法図</span><span>カタログ</span></div>
+  </div>
+</section>
+<section class="ton-group" id="ton-70">
+  <div class="ton-title"><h2>70t ラフタークレーン</h2><strong>2台</strong></div>
+  <div class="ton-photo" aria-label="実車写真準備中"><span aria-hidden="true">🏗️</span><strong>このトン数の写真は準備中</strong></div><ul class="models"><li><span>GR-700N-1</span><small>1台</small></li><li><span>GR-700N-2</span><small>1台</small></li></ul>
+  <div class="documents-note">資料：準備中（公開できる能力表・CAD・寸法図・カタログが揃い次第、型式ごとに追加します。）
+    <div class="document-types"><span>能力表</span><span>CAD</span><span>寸法図</span><span>カタログ</span></div>
+  </div>
+</section>
+<section class="ton-group" id="ton-100">
+  <div class="ton-title"><h2>100t ラフタークレーン</h2><strong>2台</strong></div>
+  <div class="ton-photo" aria-label="実車写真準備中"><span aria-hidden="true">🏗️</span><strong>このトン数の写真は準備中</strong></div><ul class="models"><li><span>GR-1000N</span><small>2台</small></li></ul>
+  <div class="documents-note">資料：準備中（公開できる能力表・CAD・寸法図・カタログが揃い次第、型式ごとに追加します。）
+    <div class="document-types"><span>能力表</span><span>CAD</span><span>寸法図</span><span>カタログ</span></div>
+  </div>
+</section>
+<div class="fleet-page-footer">有限会社 東彼クレーン　〒859-3807 長崎県東彼杵郡東彼杵町彼杵宿郷700-1<br>※台数・型式は2026年4月現在の一覧表による。</div></div></main></body></html>

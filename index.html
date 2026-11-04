@@ -33,6 +33,40 @@
 .fleet-summary-group .go-details{margin-top:12px;padding-top:16px;color:#d71920}
 .fleet-footnote{font-size:12px;color:#65717e;margin-top:18px}
 @media(max-width:900px){.fleet-counts{padding-top:62px;padding-bottom:62px}.fleet-summary{grid-template-columns:1fr;gap:16px}.fleet-summary-group{padding:20px}.fleet-summary-group h3{font-size:19px}}
+
+/* 車両写真カード：各トン数の実車写真を追加するまでプレースホルダー */
+.photo-fleet{background:#f3f6fa;padding-top:70px;padding-bottom:78px}
+.photo-fleet-header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px}
+.photo-fleet-header h2{margin:8px 0 8px;font-size:clamp(32px,4.2vw,52px)}
+.photo-fleet-header p{color:#647487;line-height:1.75;margin:0}
+.photo-group{margin-top:37px}
+.photo-group-heading{display:flex;align-items:center;gap:14px;margin:0 0 18px;color:#0b2c55}
+.photo-group-symbol{display:grid;place-items:center;width:55px;height:55px;background:#0b417c;color:#fff;border-radius:10px;font-size:28px}
+.photo-group-heading h3{font-size:clamp(22px,2.5vw,29px);margin:0}
+.photo-group-heading small{color:#66809b;margin-left:7px;font-size:14px}
+.photo-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.photo-machine{display:block;overflow:hidden;border-radius:11px;background:#fff;box-shadow:0 3px 15px rgba(6,37,74,.08);border:1px solid #e1e9f1;transition:transform .2s,box-shadow .2s}
+.photo-machine:hover{transform:translateY(-4px);box-shadow:0 13px 29px rgba(6,37,74,.16)}
+.photo-machine-visual{height:165px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;position:relative;color:#597799;background:linear-gradient(145deg,#e5edf7,#cbdced);overflow:hidden}
+.photo-machine-visual:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(122deg,transparent 0 44px,rgba(255,255,255,.15) 44px 45px)}
+.photo-machine-visual .crane-symbol{position:relative;font-size:51px;line-height:1;filter:grayscale(1);opacity:.5}
+.photo-machine-visual .waiting{position:relative;font-size:12px;font-weight:800;letter-spacing:.08em}
+.photo-machine-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo-machine-label{background:linear-gradient(120deg,#0b376d,#0c4c8e);display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 14px;color:#fff;min-height:66px}
+.photo-machine-label strong{display:block;font-size:26px;line-height:1.1}
+.photo-machine-label small{display:block;font-size:10px;font-weight:800;opacity:.9;margin-top:4px}
+.photo-machine-label .count{display:inline-flex;align-items:center;white-space:nowrap;padding:5px 8px;background:#fff;color:#092e5b;border-radius:5px;font-size:16px;font-weight:900}
+.photo-machine-label .arrow{font-size:22px;opacity:.85}
+.photo-fleet-bottom{margin-top:24px;display:grid;grid-template-columns:1fr 1.5fr;gap:16px}
+.photo-fleet-stat{background:#e5edf7;border-radius:11px;padding:26px;min-height:136px;color:#12375f}
+.photo-fleet-stat .stat-title{display:block;font-weight:900;font-size:19px}
+.photo-fleet-stat .stat-total{display:block;font-size:38px;font-weight:950;margin:10px 0 0}
+.photo-fleet-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.photo-fleet-tags span{border:1px solid #cedce9;background:#fff;border-radius:5px;padding:7px 11px;font-weight:800;font-size:12px}
+.photo-fleet-note{color:#697888;font-size:12px;line-height:1.7;margin-top:20px}
+@media(max-width:1050px){.photo-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.photo-fleet{padding-top:54px;padding-bottom:54px}.photo-fleet-header{display:block}.photo-group-heading h3{font-size:20px}.photo-group-symbol{width:42px;height:42px;font-size:22px}.photo-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.photo-machine-visual{height:122px}.photo-machine-label{padding:11px 10px;min-height:62px}.photo-machine-label strong{font-size:23px}.photo-machine-label small{font-size:9px}.photo-machine-label .count{font-size:13px;padding:5px}.photo-machine-label .arrow{display:none}.photo-fleet-bottom{grid-template-columns:1fr}.photo-fleet-stat{min-height:0;padding:22px}}
+
   </style>
 </head>
 <body>
@@ -125,27 +159,21 @@
   </section>
 
 
-  <section id="fleet-counts" class="section fleet-counts">
-    <div class="section-heading"><div><span class="section-en">FLEET LINEUP</span><h2>保有クレーン台数</h2></div><p>トン数別の保有台数と型式をご確認いただけます。</p></div>
-    <div class="fleet-summary">
-      <div class="fleet-summary-group"><h3>ラフタークレーン <span>計20台</span></h3>
-        <a href="rafter.html#ton-13"><span>13t ラフタークレーン</span><strong>2台 ↗</strong></a>
-        <a href="rafter.html#ton-16"><span>16t ラフタークレーン</span><strong>1台 ↗</strong></a>
-        <a href="rafter.html#ton-25"><span>25t ラフタークレーン</span><strong>9台 ↗</strong></a>
-        <a href="rafter.html#ton-50"><span>50t ラフタークレーン</span><strong>1台 ↗</strong></a>
-        <a href="rafter.html#ton-60"><span>60t ラフタークレーン</span><strong>3台 ↗</strong></a>
-        <a href="rafter.html#ton-70"><span>70t ラフタークレーン</span><strong>2台 ↗</strong></a>
-        <a href="rafter.html#ton-100"><span>100t ラフタークレーン</span><strong>2台 ↗</strong></a>
-        <a class="go-details" href="rafter.html">型式一覧を見る →</a></div>
-      <div class="fleet-summary-group"><h3>オールテレーンクレーン <span>計4台</span></h3>
-        <a href="allterrain.html#ton-120"><span>120t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
-        <a href="allterrain.html#ton-130"><span>130t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
-        <a href="allterrain.html#ton-300"><span>300t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
-        <a href="allterrain.html#ton-400"><span>400t オールテレーンクレーン</span><strong>1台 ↗</strong></a>
-        <a class="go-details" href="allterrain.html">型式一覧を見る →</a></div>
-    </div>
-    <p class="fleet-footnote">※保有車両一覧表（2026年4月現在）に基づく。クレーン合計24台。運輸部門の車両は別途12台。</p>
-  </section>
+  <section id="fleet-counts" class="section photo-fleet"><div class="photo-fleet-header"><div><span class="section-en">FLEET LINEUP</span><h2>保有クレーン一覧</h2><p>トン数から選んで、保有型式と資料を確認できます。</p></div></div>
+<div class="photo-group"><div class="photo-group-heading"><span class="photo-group-symbol" aria-hidden="true">🏗</span><h3>ラフタークレーン<small>計20台</small></h3></div><div class="photo-card-grid"><a class="photo-machine" href="rafter.html#ton-13" aria-label="13t ラフタークレーン 2台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>13t</strong><small>ラフタークレーン</small></span><span class="count">2台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="rafter.html#ton-16" aria-label="16t ラフタークレーン 1台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>16t</strong><small>ラフタークレーン</small></span><span class="count">1台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="rafter.html#ton-25" aria-label="25t ラフタークレーン 9台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>25t</strong><small>ラフタークレーン</small></span><span class="count">9台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="rafter.html#ton-50" aria-label="50t ラフタークレーン 1台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>50t</strong><small>ラフタークレーン</small></span><span class="count">1台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="rafter.html#ton-60" aria-label="60t ラフタークレーン 3台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>60t</strong><small>ラフタークレーン</small></span><span class="count">3台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="rafter.html#ton-70" aria-label="70t ラフタークレーン 2台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>70t</strong><small>ラフタークレーン</small></span><span class="count">2台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="rafter.html#ton-100" aria-label="100t ラフタークレーン 2台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>100t</strong><small>ラフタークレーン</small></span><span class="count">2台</span><span class="arrow" aria-hidden="true">›</span></div></a></div></div>
+<div class="photo-group"><div class="photo-group-heading"><span class="photo-group-symbol" aria-hidden="true">🏗</span><h3>オールテレーンクレーン<small>計4台</small></h3></div><div class="photo-card-grid"><a class="photo-machine" href="allterrain.html#ton-120" aria-label="120t オールテレーンクレーン 1台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>120t</strong><small>オールテレーンクレーン</small></span><span class="count">1台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="allterrain.html#ton-130" aria-label="130t オールテレーンクレーン 1台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>130t</strong><small>オールテレーンクレーン</small></span><span class="count">1台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="allterrain.html#ton-300" aria-label="300t オールテレーンクレーン 1台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>300t</strong><small>オールテレーンクレーン</small></span><span class="count">1台</span><span class="arrow" aria-hidden="true">›</span></div></a>
+<a class="photo-machine" href="allterrain.html#ton-400" aria-label="400t オールテレーンクレーン 1台・詳細を見る"><div class="photo-machine-visual"><span class="crane-symbol" aria-hidden="true">🏗️</span><span class="waiting">写真準備中</span></div><div class="photo-machine-label"><span><strong>400t</strong><small>オールテレーンクレーン</small></span><span class="count">1台</span><span class="arrow" aria-hidden="true">›</span></div></a></div></div>
+<div class="photo-fleet-bottom"><div class="photo-fleet-stat"><span class="stat-title">クレーン保有台数</span><strong class="stat-total">合計 24台</strong></div><div class="photo-fleet-stat"><span class="stat-title">運搬車両（計12台）</span><div class="photo-fleet-tags"><span>トラクタ 4台</span><span>トレーラー 3台</span><span>トラック 3台</span><span>ユニック 1台</span><span>ダンプ 1台</span></div></div></div>
+<p class="photo-fleet-note">※台数・型式は保有車両一覧表（2026年4月現在）に基づきます。各クレーンの実車写真は確認後に掲載します。</p>
+</section>
 
   <section id="works" class="section works-section">
     <div class="works-inner">
