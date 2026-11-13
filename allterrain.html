@@ -73,7 +73,7 @@
     <li><span>ATF400G-6</span><small>1台</small></li>
   </ul>
 
-  <div class="documents-note"><strong>資料ダウンロード</strong><div class="auto-docs" aria-live="polite"></div><div class="auto-docs-status">資料は準備中です。</div></div>
+  <div class="documents-note"><strong>資料ダウンロード</strong><div class="auto-docs" aria-live="polite"><a href="ATF400G-6.pdf" target="_blank" rel="noopener noreferrer">📄 ATF400G-6 能力表・仕様書</a></div><div class="auto-docs-status"></div></div>
 </section>
 
  
@@ -104,7 +104,7 @@
     const list = section.querySelector('.auto-docs');
     const status = section.querySelector('.auto-docs-status');
     if (!list || !status) return;
-    status.textContent = '資料は準備中です。';
+    status.textContent = list.querySelector('a') ? '' : '資料は準備中です。';
     const models = [...section.querySelectorAll('.models li span')].map(el => el.textContent.trim());
     const formats = [
       ['能力表・仕様書', model => [model + '.pdf', 'pdf/' + model + '.pdf']],
@@ -113,12 +113,13 @@
       ['寸法図', model => ['dimensions/' + model + '.pdf', model + '-dimensions.pdf']],
       ['カタログ', model => ['catalog/' + model + '.pdf', model + '-catalog.pdf']]
     ];
-    let foundCount = 0;
+    let foundCount = list.querySelectorAll('a').length;
     // A failed or delayed request must not block other download links.
     models.forEach(model => formats.forEach(async ([label, paths]) => {
       try {
         for (const path of paths) {
           if (!(await exists(path))) continue;
+          if ([...list.querySelectorAll('a')].some(link => link.getAttribute('href') === path)) return;
           const link = document.createElement('a');
           link.href = path;
           link.textContent = '📄 ' + model + ' ' + label;
