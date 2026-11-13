@@ -104,7 +104,7 @@
     const list = section.querySelector('.auto-docs');
     const status = section.querySelector('.auto-docs-status');
     if (!list || !status) return;
-    status.textContent = '資料を確認中…';
+    status.textContent = '資料は準備中です。';
     const models = [...section.querySelectorAll('.models li span')].map(el => el.textContent.trim());
     const formats = [
       ['能力表・仕様書', model => [model + '.pdf', 'pdf/' + model + '.pdf']],
@@ -113,22 +113,26 @@
       ['寸法図', model => ['dimensions/' + model + '.pdf', model + '-dimensions.pdf']],
       ['カタログ', model => ['catalog/' + model + '.pdf', model + '-catalog.pdf']]
     ];
-    const checks = models.flatMap(model => formats.map(async ([label, paths]) => {
-      for (const path of paths) {
-        if (await exists(path)) return { label: model + ' ' + label, path };
+    let foundCount = 0;
+    // A failed or delayed request must not block other download links.
+    models.forEach(model => formats.forEach(async ([label, paths]) => {
+      try {
+        for (const path of paths) {
+          if (!(await exists(path))) continue;
+          const link = document.createElement('a');
+          link.href = path;
+          link.textContent = '📄 ' + model + ' ' + label;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          list.appendChild(link);
+          foundCount += 1;
+          status.textContent = '';
+          return;
+        }
+      } catch {
+        if (!foundCount) status.textContent = '資料は準備中です。';
       }
-      return null;
     }));
-    const found = (await Promise.all(checks)).filter(Boolean);
-    for (const file of found) {
-      const link = document.createElement('a');
-      link.href = file.path;
-      link.textContent = '📄 ' + file.label;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      list.appendChild(link);
-    }
-    status.textContent = found.length ? '' : '資料は準備中です。';
   });
 })();
 </script>
