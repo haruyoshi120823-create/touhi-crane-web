@@ -103,6 +103,31 @@
     if (!list) return;
     list.innerHTML = '';
     const models = [...section.querySelectorAll('.models li span')].map(x=>x.textContent.trim());
+    if (section.id === 'ton-120') {
+      const parts = [
+        ['ATF120N-5.1_part1.pdf', '📄 ATF120N-5.1 能力表 前半（1〜190ページ）'],
+        ['ATF120N-5.1_part2.pdf', '📄 ATF120N-5.1 能力表 後半（191〜380ページ）']
+      ];
+      for (const [path, label] of parts) {
+        const link = document.createElement('a');
+        link.className = 'ability-button is-pending';
+        link.textContent = label + '（確認中…）';
+        link.setAttribute('aria-disabled', 'true');
+        list.appendChild(link);
+        if (await fileExists(path)) {
+          link.href = path;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = label;
+          link.classList.remove('is-pending');
+          link.removeAttribute('aria-disabled');
+        } else {
+          link.textContent = label + '（準備中）';
+        }
+      }
+      if (status) status.textContent = '';
+      return;
+    }
     for (const model of models) {
       const link = document.createElement('a');
       link.className = 'ability-button is-pending';
